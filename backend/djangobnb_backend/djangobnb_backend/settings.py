@@ -84,7 +84,8 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 REST_AUTH = {
     "USE_JWT": True,
-    "JWT_AUTH_HTTPONLY": False
+    "JWT_AUTH_HTTPONLY": False,
+    "REGISTER_SERIALIZER": "useraccount.serializers.CustomRegisterSerializer",
 }
 
 
