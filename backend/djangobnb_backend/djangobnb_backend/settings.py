@@ -32,7 +32,7 @@ AUTH_USER_MODEL = 'useraccount.User'
 SITE_ID = 1
 
 
-WEBSITE_URL = 'http://localhost:8000/'
+WEBSITE_URL = 'http://localhost:8000'
 
 
 SIMPLE_JWT = {
@@ -42,7 +42,7 @@ SIMPLE_JWT = {
     "BLACKLIST_AFTER_ROTATION": False,
     "UPDATE_LAST_LOGIN": True,
     "SIGNING_KEY": "acomplexkey",
-    "ALGORITHM": "HS512",
+    "ALOGRIGTHM": "HS512",
 }
 
 
@@ -84,8 +84,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 REST_AUTH = {
     "USE_JWT": True,
-    "JWT_AUTH_HTTPONLY": False,
-    "REGISTER_SERIALIZER": "useraccount.serializers.CustomRegisterSerializer",
+    "JWT_AUTH_HTTPONLY": False
 }
 
 
@@ -119,6 +118,7 @@ INSTALLED_APPS = [
 
     'useraccount',
     'property',
+    'chat',
 
 
 ]
@@ -230,5 +230,3 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-
